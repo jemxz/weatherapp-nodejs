@@ -6,8 +6,12 @@ require('dotenv').config();
 weather.setLang('en');
 weather.setCityId(344979);
 weather.setUnits('metric');
+
+
 weather.setAPPID(process.env.API_KEY);
 
-weather.getWeatherForecastForDays(5, function(err, obj){
-    console.log(obj);
+
+
+weather.getSmartJSON(function(smart){
+    console.log(smart);
 });
